@@ -1,52 +1,42 @@
-const React = require('react-native');
-
-const NAV_BAR_HEIGHT = 44;
+const NAV_BAR_HEIGHT = 38;
 const STATUS_BAR_HEIGHT = 20;
 const NAV_HEIGHT = NAV_BAR_HEIGHT + STATUS_BAR_HEIGHT;
 
-module.exports = React.StyleSheet.create({
+module.exports = {
   navBarContainer: {
-    height: NAV_HEIGHT,
-    backgroundColor: 'white',
-    paddingBottom: 5,
-    borderBottomColor: 'rgba(0, 0, 0, 0.5)',
-    borderBottomWidth: 1 / React.PixelRatio.get(),
+    backgroundColor: '#F06199',
+    borderBottomColor: '#F06199',
+    borderBottomWidth: 1,
+  },
+  statusBar: {
+    height: STATUS_BAR_HEIGHT,
   },
   navBar: {
-    height: NAV_HEIGHT,
+    height: NAV_BAR_HEIGHT,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   customTitle: {
     position: 'absolute',
-    alignItems: 'center',
-    bottom: 5,
     left: 0,
     right: 0,
+    bottom: 6,
+    alignItems: 'center',
   },
-  navBarText: {
-    fontSize: 16,
-    marginVertical: 10,
-    flex: 2,
-    textAlign: 'center',
+  navBarButton: {
+    fontSize: 18,
+    letterSpacing: 0.5,
+    marginTop: 16,
   },
   navBarTitleText: {
-    color: '#373e4d',
+    fontSize: 17,
+    letterSpacing: 0.5,
+    color: '#333',
     fontWeight: '500',
     position: 'absolute',
     left: 0,
     right: 0,
-    bottom: 15,
+    bottom: 7,
+    textAlign: 'center',
   },
-  navBarLeftButton: {
-    paddingLeft: 10,
-    marginVertical: 20,
-  },
-  navBarRightButton: {
-    marginVertical: 20,
-    paddingRight: 10,
-  },
-  navBarButtonText: {
-    color: '#5890ff',
-  },
-});
+};
